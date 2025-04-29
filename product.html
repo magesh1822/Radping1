@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RADPING</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/type here"/>
+<link rel="stylesheet" href="CSS/Styles.css" media="all" />
+<link rel="stylesheet" href="CSS/app_font.css" media="all" />
+<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
+<script type="text/javascript" src="script/product.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77764505-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+$("document").ready(function(){
+
+	$("#nav_sec1").append("<div id='tab_sel'></div>");
+	
+	var $magicline = $("#tab_sel");
+		
+	
+		$magicline.css("left",$(".sel a").position().left + 75).data("orgLeft",$magicline.position().left);
+		
+		if(window.matchMedia('(max-width: 1280px)').matches)
+			{
+				$magicline.css("left",$(".sel a").position().left + 55).data("orgLeft",$magicline.position().left);
+			} else {
+				$magicline.css("left",$(".sel a").position().left + 75).data("orgLeft",$magicline.position().left);
+			}
+		
+		$(".menu li").find("a").hover(function()
+			{
+				//alert("hi");
+				$this=$(this);
+				leftPos=$this.position().left;
+				newWidth=$this.width();
+				newleft = leftPos + (newWidth/2);
+				$magicline.stop().animate({left:newleft});
+			},function(){
+			$magicline.stop().animate({left:$magicline.data("orgLeft")});
+			});
+		
+
+});
+</script>
+<script type='text/javascript' src='script/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
+
+<!-- Skitter Styles -->
+  <link href="CSS/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+  
+  <!-- Skitter JS -->
+  <script type="text/javascript" language="javascript" src="script/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" language="javascript" src="script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" language="javascript" src="script/jquery.skitter.min.js"></script>
+  
+  <script type="text/javascript" src="script/modernizr.custom.53451.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script/jquery.gallery.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#dg-container').gallery();
+				$('#dg-container1').gallery();
+				$('#dg-container2').gallery();
+				$('#dg-container3').gallery();
+				$('#dg-container4').gallery();
+			});
+		</script>
+  <!-- Init Skitter -->
+  <script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+      $('.box_skitter_large').skitter({
+        theme: 'clean',
+        numbers_align: 'center',
+        progressbar: true, 
+        dots: true, 
+        preview: true
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+<div class="top-gr"></div>
+   <div class="wrapper_menu">
+		<div id="brand"><img src="Images/logo.jpg" /></div>
+         <div id="nav_sec1">
+        	<ul class="menu">
+            	<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="sel"><a href="product.html">Products</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+   		<button id="nav-btn"><img src="Images/menu_icon.png" /></button>            
+        </div>
+   </div> 
+</header>
+<div id="main">
+    <!--<div id="banner_sec">
+    	<div id="content">
+          <div class="border_box">
+            <div class="box_skitter box_skitter_large">
+              <ul>
+                <li><a href="#cube"><img src="images/example/001.jpg" class="circles" /></a><div class="label_text"><p>cube</p></div></li>
+                <li><a href="#cubeRandom"><img src="images/example/002.jpg" class="circlesInside" /></a><div class="label_text"><p>cubeRandom</p></div></li>
+                <li><a href="#block"><img src="images/example/003.jpg" class="circlesRotate" /></a><div class="label_text"><p>block</p></div></li>
+                <li><a href="#cubeStop"><img src="images/example/004.jpg" class="cubeShow" /></a><div class="label_text"><p>cubeStop</p></div></li> 
+              </ul>
+            </div>
+          </div>
+    	</div>
+    </div>-->
+    <div class="wrapper" id="home_sec">
+        <div class="content_sec">
+            <ul id="prod_tab">
+            	<li class="sel"><button>Radiology</button></li>
+                <li><button>Cardiology</button></li>
+                <li><button>Dental</button></li>
+                <li><button>Critical Care</button></li>
+                <li><button>Product Service</button></li>
+            </ul>
+            <div id="prod_main">
+            	<div id="prod_rad">
+                	<section id="dg-container" class="dg-container">
+                        <div class="dg-wrapper">
+                            <a href="#" id="p_1"><img src="Images/radiology/fixed_digital.jpg" alt="image01"><div>Digital X-Ray Systems</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_2"><img src="Images/radiology/mobile_digital.jpg" alt="image02"><div>Mobile Digital Radiography Systems</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_3"><img src="Images/radiology/c_arm.jpg" alt="image03"><div>C Arm II Tube System</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_4"><img src="Images/radiology/c_arm_hd.jpg" alt="image04"><div>C-Arm - HD FPD System</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_5"><img src="Images/radiology/ct_guided.jpg" alt="image05"><div>Highnoon – CT Guided Biopsy Navigation Device</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_6"><img src="Images/radiology/cathlab.jpg" alt="image06"><div>CT – Pressure Injectors</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_7"><img src="images/radiology/single_injector.jpg" alt="image07"><div>CT Single Head Pressure Injector </div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_8"><img src="images/radiology/Dual_Injector.jpg" alt="image08"><div>CT Dual Head Pressure Injector </div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_9"><img src="images/radiology/mri_injector.jpg" alt="image09"><div>MRI Injector</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_10"><img src="images/radiology/mamography.jpg" alt="image10"><div>Mammography Systems</div><button>ClicK here to View More Details</button></a>
+                            <!--<a href="#"><img src="images/9.jpg" alt="image09"><div>http://learnlakenona.com/</div></a>
+                            <a href="#"><img src="images/10.jpg" alt="image10"><div>http://www.neighborhood-studio.com/</div></a>
+                            <a href="#"><img src="images/11.jpg" alt="image11"><div>http://www.beckindesign.com/</div></a>
+                            <a href="#"><img src="images/12.jpg" alt="image12"><div>http://kicksend.com/</div></a>-->
+                        </div>
+                        <nav>	
+                            <span class="dg-prev"><img src="Images/prev_btn.png" class="" /></span>
+                            <span class="dg-next"><img src="Images/next_btn.png" class="" /></span>                        </nav>
+                    </section>
+                </div>
+                <div id="prod_car">
+                	<!--<div class="prod1">
+                    	<label>PHILIPS CATHLAB FD10</label>		
+                    	<div><img src="Images/p1.jpg" alt="image01" class="" /></div>                        
+                    </div>
+                    <div class="prod1">
+                    	<label>PHILIPS /GE CT SCANNER 16 SLICE TO 128 SLICE</label>		
+                    	<div><img src="Images/p2.jpg" alt="image01" class="" /></div>                        
+                    </div>
+                    <div class="prod1">
+                    	<label>PHILIPS/GE MRI SCANNER 1.5 TESLA 4 CHANNEL TO 32 CHANNEL</label>		
+                    	<div><img src="Images/p3.jpg" alt="image01" class="" /></div>                        
+                    </div>
+                    <div class="prod1">
+                    	<label>DIGITAL X-RAY</label>		
+                    	<div><img src="Images/p4.jpg" alt="image01" class="" /></div>                        
+                    </div>
+                    <div class="prod1">
+                    	<label>C-ARM EQUIPMENTS</label>		
+                    	<div><img src="Images/p5.jpg" alt="image01" class="" /></div>                        
+                    </div>
+                    <div class="prod1">
+                    	<label>MOBILE CATHLAB</label>		
+                    	<div><img src="Images/p6.jpg" alt="image01" class="" /></div>                        
+                    </div>-->
+                    <section id="dg-container1" class="dg-container">
+                        <div class="dg-wrapper">
+                            <a href="#"><img src="Images/p1.jpg" alt="image01"><div>PHILIPS CATHLAB FD10</div></a>
+                            <a href="#"><img src="Images/p2.jpg" alt="image02"><div>PHILIPS /GE CT SCANNER 16 SLICE TO 128 SLICE</div></a>
+                            <a href="#"><img src="Images/p3.jpg" alt="image03"><div>PHILIPS/GE MRI SCANNER 1.5 TESLA 4 CHANNEL TO 32 CHANNEL</div></a>
+                            <a href="#"><img src="Images/p4.jpg" alt="image04"><div>PHILIPS /GE CT SCANNER 16 SLICE TO 128 SLICE</div></a>
+                            <a href="#"><img src="Images/p5.jpg" alt="image05"><div>PHILIPS/GE MRI SCANNER 1.5 TESLA 4 CHANNEL TO 32 CHANNEL</div></a>
+                            <a href="#"><img src="Images/p6.jpg" alt="image06"><div>PHILIPS/GE MRI SCANNER 1.5 TESLA 4 CHANNEL TO 32 CHANNEL</div></a>
+                        </div>
+                        <nav>	
+                            <span class="dg-prev"><img src="Images/prev_btn.png" class="" /></span>
+                            <span class="dg-next"><img src="Images/next_btn.png" class="" /></span>                        </nav>
+                    </section>
+                </div>
+                <div id="prod_den">
+                	<section id="dg-container2" class="dg-container">
+                        <div class="dg-wrapper">
+                            <a href="#" id="p_d1"><img src="Images/dental/opg_machine.jpg" alt="image01"><div>OPG Machine</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_d2"><img src="Images/dental/CBCT.jpg" alt="image02"><div>CBCT Machine</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_d3"><img src="Images/dental/intra_oral.jpg" alt="image03"><div>Intraoral Scanner</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_d4"><img src="Images/dental/portable_dental.jpg" alt="image04"><div>Portable dental X-Ray</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_d5"><img src="Images/dental/dental_chair.jpg" alt="image05"><div>Dental Chairs</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_d6"><img src="Images/dental/CBCT.jpg" alt="image06"><div>CBCT Machine</div><button>ClicK here to View More Details</button></a>
+                        </div>
+                        <nav>	
+                            <span class="dg-prev"><img src="Images/prev_btn.png" class="" /></span>
+                            <span class="dg-next"><img src="Images/next_btn.png" class="" /></span>                        </nav>
+                    </section>
+                </div>
+                <div id="prod_crit">
+                	<section id="dg-container3" class="dg-container">
+                        <div class="dg-wrapper">
+                            <a href="#" id="p_cc1"><img src="Images/critical_care/ventilator.jpg" alt="image01"><div>ICU Ventilator</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_cc2"><img src="Images/critical_care/workstation.jpg" alt="image02"><div>Anesthesia Workstation</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_cc3"><img src="Images/critical_care/ecg_monitor.jpg" alt="image03"><div>ECG Monitor</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_cc4"><img src="Images/critical_care/defibrillator.jpg" alt="image04"><div>Defibrillator</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_cc5"><img src="Images/critical_care/modular.jpg" alt="image05"><div>Modular OT-Duckless</div><button>ClicK here to View More Details</button></a>
+                            <a href="#" id="p_cc6"><img src="Images/critical_care/workstation.jpg" alt="image06"><div>Anesthesia Workstation</div><button>ClicK here to View More Details</button></a>
+                        </div>
+                        <nav>	
+                            <span class="dg-prev"><img src="Images/prev_btn.png" class="" /></span>
+                            <span class="dg-next"><img src="Images/next_btn.png" class="" /></span>                        </nav>
+                    </section>
+                </div>
+                <div id="prod_ser">
+                	<h1> Service page</h1>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<div id="prod_pop">
+	<div id="p_1_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Digital X-Ray Systems<button>X</button></div>  
+        	<div class="prod_pop_inrcnt"> 		
+                <ul class="prod_pop_list">
+                	<li><label>Detector Technology:</label> BPD CCD</li>
+                	<li><label>Scintillator :</label> CsI / Gd2O2S2</li>
+                	<li><label>View Field :</label> 17” X 17” / 17” X 14”</li>
+                	<li><label>Pixel Matrix :</label> 4K X 4K, 16 Million Pixels</li>
+                	<li><label>Pixel Size :</label> 108 μm.</li>
+                	<li><label>Limit Space Resolution :</label> 4.6 lp / mm</li>
+                	<li><label>Output Gray scale :</label> 16 bit</li>
+                	<li><label>POD Technology :</label> Double Pixel size to reduce the dose</li>
+                </ul>
+                <label>Mechanical Specifications:</label>
+                <ul class="prod_pop_list">
+                	<li><label>Vertical Movement :</label> 350 - 1850mm ( Center of the detector )</li>
+                	<li><label>Maximum up and down speed :</label> 60 mm / sec.</li>
+                	<li><label>Detector Rotation :</label> 0 -270°.</li>
+                	<li><label>Maximum Rotation Speed :</label> 12° / sec.</li>
+                </ul>
+                <label>Main Functions of Workstation:</label> 
+                <ul class="prod_pop_list">
+                	<li>Position Indicator</li>
+                	<li>Tissue Equalization</li>
+                	<li>Filter Correction</li>
+                	<li>Gray scale Transform</li>
+                	<li>Window / Level Adjustment</li>
+                	<li>Gamma correction</li>
+                	<li>ROI Equalization</li>
+                	<li>Black / White Reversion</li>
+                	<li>Image segmentation</li>
+                	<li>Mark</li>
+                	<li>ROI Equalization</li>
+                </ul>
+                <label>Models:</label> 
+                <ul class="prod_pop_list">
+                	<li><label>Max. Output Power : </label>50 KW</li>
+                	<li><label>High Frequency : </label>40KHz</li>
+                	<li><label>Maximum KVP : </label>150 KVP</li>
+                	<li><label>Maximum mA : </label>630 mA</li>
+                	<li>X-Ray Filter control</li>
+                	<li><label></label>Anode launcher</li>
+                	<li>Automatic Exposure Control (AEC)</li>
+                	<li><label>Digital Image Control Interface : </label>Custom design is available</li>
+                	<li><label>Communication Interface : </label>RS-232 / RS-422</li>
+                	<li><label>Automatic input </label>voltage compensation</li>
+                	<li></li>
+                </ul>
+            </div>
+    </div>
+    <div id="p_2_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Mobile Digital Radiography Systems<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">
+                <label>Advanced Mobile Digital Radiography Systems</label>  		
+                <p>We are a leading healthcare system and service provider in India, offering a comprehensive range of medical equipment, medical supplies, and healthcare services across the nation and the globe. Our rapid growth has allowed us to extend our reach nationwide, providing unparalleled products characterized by technical excellence and superior quality services. Our fundamental strengths have positioned us as leaders in the industry.
+Mobile DR
+Our high-frequency Mobile Digital Radiography Systems are ideally suited for use in Emergency Rooms, Intensive Care Units, and for bedside X-rays, all while minimizing radiation exposure. The superior image quality offered by Digital Radiography makes it the preferred method for practitioners.</p>
+				<label>Special Features:</label>
+                <ul class="prod_pop_list">
+                	<li>Available in various power options: 2.5 / 3.5 / 6 / 15 / 32 KW.</li>
+                    <li>Lightweight and maneuverable design ensures easy mobilization and convenient operation.</li>
+                    <li>User-friendly Touch Screen Control Panel.</li>
+                    <li>Sleek design delivering fast and outstanding image quality.</li>
+                    <li>Equipped with a 14” x 17” portable wired / wireless Flat Panel Detector.</li>
+                    <li>Microprocessor-based control for high accuracy.</li>
+                    <li>Features dual control radiographic functionality, prioritizing both safety and efficiency.</li>
+                    <li>Utilizes Stationary / Rotating anode X-Ray tube with Monoblock.</li>
+                    <li>LAN connectivity with DICOM printer capabilities.</li>
+                </ul>
+                <label>Models:</label>
+                <p>EP Corsa 2.5 M / 3.5 M / 6 SM / 6 M / 15 M / 30 M / ASTRO 6 M</p>                
+                <label>Ratings:</label>
+                <p>2.5 / 3.5 / 6 / 15 / 32 kW (60 - 400 mA)</p>
+                <label>Series</label>
+                <p>EP Corsa / Astro HF Mobile DR<br>We are committed to building a healthier world through our range of world-class products.</p>
+            </div>
+    </div>
+    <div id="p_3_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">C Arm II Tube System<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+                <p>Radping suppliers of High Quality Surgery Mobile C-Arm X-ray Systems</p>
+                <p>Radping Providing sales and service provider of advanced radiographic and C-Arm X-ray System with sharp and clear image. Our is latest generator design and simplified positioning to provide ideal system for today's complex surgical procedures. Uniquely equipped with a single filed (6") or dual field (9") I.I and ABC, the product offer a consistent superb image quality. It is primarily utilized for surgical, orthopedic, endoscopy, cardiology and ER procedures.</p>
+				<label>Technical Specifications for HF Mobile Image Intensifier (c-arm) system:</label>
+                <label>Models :</label>
+                <p>VHFC</p>                
+                <label>Max. Output Power :</label>
+                <p>3.5KW</p>
+                <label>Inverter Frequency :</label>
+                <p>40KHz</p>
+                <label>Kvp Range :</label>
+                <p>40 kvp – 100 Kvp Step size (1 kvp)</p>
+                <label>Mode of Operation :</label>
+                <p>Fluoroscopy (default)<br>
+ABC (Automatic Brightness Control)<br>
+Pulse Fluoroscopy<br>
+Radiography</p>
+                <label>kvp Range :</label>
+                <p>40 Kvp – 100 Kvp (step size 1 kvp) (For Radiograph mode) 40 Kvp – 100 Kvp (Step size 1 kvp) (For Fluoroscopy mode)</p>
+                <label>mA Range :</label>
+                <p>32 mA – 50 mA (For Radiograph mode) 0.5 – 3 mA (For Fluoroscopy mode)</p>
+                <label>Exposure Time :</label>
+                <p>0.001 sec. – 5 sec</p>
+                <label>mAs Range :</label>
+                <p>1 mAs – 200 mAs (Radiography mode)</p>
+                <label>Input :</label>
+                <p>230 V AC, single phase</p>
+            </div>
+    </div>
+    <div id="p_4_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">C-Arm - HD FPD System:<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+                <p>Radping suppliers of High Quality Surgery Mobile C-Arm X-ray Systems</p>
+                <p>Radping Providing sales and service provider of advanced radiographic and C-Arm X-ray System with sharp and clear image. Our is latest generator design and simplified positioning to provide ideal system for today's complex surgical procedures. Uniquely equipped with a single filed (6") or dual field (9") I.I and ABC, the product offer a consistent superb image quality. It is primarily utilized for surgical, orthopedic, endoscopy, cardiology and ER procedures.</p>
+				<label>Technical Specifications for HF Mobile Image Intensifier (c-arm) system:</label>
+                <label>Models :</label>
+                <p>VHFC</p>                
+                <label>Max. Output Power :</label>
+                <p>6KW</p>
+                <label>Inverter Frequency :</label>
+                <p>40KHz</p>
+                <label>Kvp Range :</label>
+                <p>40 kvp – 120 Kvp Step size (1 kvp)</p>
+                <label>Mode of Operation :</label>
+                <p>Fluoroscopy (default)<br>
+ABC (Automatic Brightness Control)<br>
+Pulse Fluoroscopy<br>
+Radiography</p>
+                <label>kvp Range :</label>
+                <p>40 Kvp – 120 Kvp (step size 1 kvp) (For Radiograph mode) 40 Kvp – 120 Kvp (Step size 1 kvp) (For Fluoroscopy mode)</p>
+                <label>mA Range :</label>
+                <p>50 mA – 150 mA (For Radiograph mode) 0.5 – 3 mA (For Fluoroscopy mode)</p>
+                <label>Exposure Time :</label>
+                <p>0.001 sec. – 5 sec</p>
+                <label>mAs Range :</label>
+                <p>1 mAs – 200 mAs (Radiography mode)</p>
+                <label>Input :</label>
+                <p>230 V AC, single phase</p>
+            </div>
+    </div>
+    <div id="p_5_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Highnoon – CT Guided Biopsy Navigation Device:<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">
+                <label>Introduction</label>  		
+                <p>HighNoon is India's first shadow-based, CT-guided instrument positioning assistant<br>
+                It is designed to aid clinicians in performing high-risk and high-precision percutaneous medical interventions.sss</p>
+				<label>Problem:</label>
+                <ul class="prod_pop_list">
+                	<li>The accuracy of needle placement in CT-guided interventions is highly dependent on the physician's skill and experience.</li>
+                	<li>Vulnerable anatomy near the target area is susceptible to injury. </li>
+                	<li>Conventional techniques often require multiple needle adjustments and intra-procedural imaging</li>
+                	<li>This leads to longer procedures</li>
+                	<li>It also increases patient pain</li>
+                	<li>Radiation exposure is increased</li>
+                	<li>Procedural risk is increased</li>
+                </ul>
+                <label>Solution - How HighNoon Helps:</label>
+                <ul class="prod_pop_list">
+                	<li>HighNoon offers complete procedural control through a user-friendly planning station.</li>
+                	<li>It provides simple, shadow-based, real-time guidance.</li>
+                	<li>It allows for confirmation of instrument placement.   </li>
+                	<li>It helps users target lesions of any size and location.</li>
+                	<li>HighNoon aims to improve efficacy by enabling accurate instrument placement. </li>
+                	<li>It minimizes iterations. </li>
+                	<li>It reduces patient puncture and radiation.</li>
+                	<li>It promotes quicker procedures.</li>
+                	<li>It allows for better scanner utilization.</li>
+                	<li>It improves patient and clinician comfort.</li>
+                </ul>
+                <label>Three-Level Confirmation:</label>
+                <ul class="prod_pop_list">
+                	<li>HighNoon employs a three-level confirmation process to ensure needle point accuracy</li>
+                	<li>The first level is laser crosshair alignment to the center of the needle hub.</li>
+                	<li>The second level is the alignment of all 4 needle shadows to the laser crosshair.</li>
+                	<li>The third level is the alignment of the needle hub to the center of the green circle on the monitor.</li>
+                </ul>
+                <label>Three-Level Confirmation:</label>
+                <ul class="prod_pop_list">
+                	<li>Clinical data shows HighNoon achieves 2mm positioning accuracy. </li>
+                	<li>It has a 3% manipulation rate. </li>
+                	<li>The average time to place the needle is 11 minutes.</li>
+                	<li>The average wheel-in and wheel-out time is 26 minutes. </li>
+                	<li>These averages are calculated from 55 patient data points.</li>
+                </ul>
+            </div>
+    </div>
+    <div id="p_6_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Zenith H15 High Pressure Angiography Injector:<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+            	<label>Special Features:</label>
+                <ul class="prod_pop_list">
+                	<li>Large color touch-screen makes the operation more intuitive and makes the injection planning and  process  controlling easier</li>
+                	<li>Clear and perspicuous operate screen</li>
+                	<li>Multiple, safe and reliable ports work well with different imaging equipments</li>
+                </ul>		
+            	<label>Specification:</label>
+                <ul class="prod_pop_list">
+                	<li><label>Flow Rate:</label> 0.1 to 50 ml/sec. in 0.1 ml/sec. increments</li>
+                	<li><label>Volume:</label> 0.1 ml to max. syringe capacity in 0.1 ml increments</li>
+                	<li><label>Syringe Capacity:</label> 150ml</li>
+                	<li><label>Pressure Limit:</label> Settable from 300 psi to 1200 psi in 1 psi increment.</li>
+                </ul>
+            </div>
+    </div>
+    <div id="p_7_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Zenith C-10/C-20 CT Single Head Pressure Injector<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+                <p><b>Zenith CT injector</b> is made for the injection of a contrast agent in enhanced the imaging of CT scan and MRI as well as DSA angiography systems. Zenith is one of the national standard Contrast media Injector.</p>
+                <p>Characteristic <b>Zenith CT injector</b> is controlled by a computer system. It takes advantage of specialized syringes and other accessories, so the cost of injection is very low. The delivery rate and volume satisfy all the criteria required by enhanced CT scan.</p>
+                <label>Special Features:</label>
+                <ul class="prod_pop_list">
+                	<li>The highest delivery rate: 9.9ml/s, the lowest delivery rate: 0.1ml/s. The large range of rate from 0.1ml/s to 9.9 ml/s satisfies all of the requirements for any enhanced CT scan. One to four phases injections meet a variety of CT injection’s need.</li>
+                    <li>Large-size disposable syringe meets various requirements for volume of any enhanced CT scan.</li>
+                    <li>The highest pressure limit increase the safety of process</li>
+                    <li>Relay input/output interface connects to different CT scan facilities in the safest manner.</li>
+                    <li>Small diameter pipe tube reduces the waste of contrast agent, and synchronizes the delivery of contrast agent and scan.</li>
+                    <li>Long-distance control box enables the user to monitor it in either control room or scanning room.</li>
+                </ul>
+                <label>Specification:</label>
+                <ul class="prod_pop_list">
+                	<li>Flow Rate: 0.1 to 9.9 ml/sec. in 0.1 ml/sec. increments</li>
+                    <li>Syringe Capacity:  100ml for Zenith-C10,200ml for Zenith-C20</li>
+                    <li>Volume:1 ml to syringe capacity in 0.1 ml increments</li>
+                    <li>Preset limit: 50 psi default, user settable 100 to 300 psi</li>
+                    <li>Injection or Scan Delay: 0 to 99 seconds in 1 sec. increments.</li>
+                </ul>
+            </div>
+    </div>
+    <div id="p_8_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Zenith C11/C22- CT Dual Head Pressure Injector<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+                <p>Zenith Dual Syringe CT Injector can match all the demands of contrast-enhanced scan for Multislice-CT MS-CT including the most advanced clinical applications.</p>
+                <label>Special Features:</label>
+                <ul class="prod_pop_list">
+                	<li>Large color touch-screen makes operate more intuitionists and makes injection planning and process controlling easier.</li>
+                	<li>Clear and intelligible operate screen.</li>
+                	<li>Flexible injection design can help you realizing the simplest 1 phase single syringe injection, or finishing the complicated 6 phases dual syringe injection. All are in your control.</li>
+                	<li>The elaborate assistant tray on which operator can place the fluid bottles or other things, and put the connector tubing or the scalp vein set in the special place.</li>
+                </ul>
+                <label>Specification:</label>
+                <ul class="prod_pop_list">
+                	<li>Flow Rate: 0.1 mL/sec. to 10 mL/sec. in 0.1 mL/sec. increments</li>
+                	<li>Syringe Capacity: 100ml for Zenith-C11,200ml for Zenith-C22</li>
+                	<li>Volume: 1 ml to syringe capacity in 0.1 ml increments</li>
+                	<li>Preset limit: 325 psi default, user settable 100 to 300 psi</li>
+                	<li>Injection or Scan Delay: 0 to 600 seconds in 1sec. increments.</li>
+                </ul>
+            </div>
+    </div>
+    <div id="p_9_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Zenith C60 - MRI Pressure Injector<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+                <p>Zenith MR Injector with non-magnetic structure can meet all your need in CE-MR imaging and have multiple helpful features.C60 is compatible with magnetic force up to 3T MR imaging system</p>
+                <ul class="prod_pop_list">
+                	<li>Delivering saline after the injection of contrast medium, which enhance the quality of imaging.</li>
+                	<li>KVO procedures prevent the position of injection from blood coagulation.</li>
+                </ul>
+                <label>Special Features:</label>
+                <ul class="prod_pop_list">
+                	<li>Excellent performance, 8 Amp. hour battery offers longer scan times between charges</li>
+                	<li>Independent KVO procedure</li>
+                	<li>On-screen tutorial for the simplification of set-up procedure</li>
+                	<li>Flexible power management with Integrated Continuous Battery Charger option allows either full, non-tethered battery operation or continuous battery charging through AC power connection – switch to either battery or power source in seconds</li>
+                	<li>Mobile configuration available for MR trailers</li>
+                	<li>Multi-phase injection control</li>
+                 </ul>
+                 <label>Specification:</label>
+                <ul class="prod_pop_list">
+                	<li><label>Flow Rate:</label> 0.1 ml/sec. to 10 ml/sec. in 0.1 ml/sec. increments</li>
+                	<li><label>Syringe Capacity:</label> 65ml</li>
+                	<li><label>Volume:</label> 0.1 ml to syringe capacity in 0.1 ml increments</li>
+                	<li><label>Pressure Limit:</label> 300psi factory set</li>
+                	<li><label>Injection or Scan Delay:</label> 0 to 1000 seconds in 0.1 sec. increments.</li>
+                </ul>
+            </div>
+    </div>
+    <div id="p_10_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Mammography Systems<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">		
+                <p>Radping is  leading Sales and Supplier of Mammography Systems, Control Panels, X-ray tube, High Frequency Generator.</p>
+                <label>Control Panel:</label>
+                <p>VISIMAM is a state–of–the-art breast cancer detection system that is design to improve the quality and comfort of mammograms. The system produces high quality of images that allow for better visualization of breast tissue, aiding the early detection of breast cancer. This advanced system also includes features, that reduce procedure times and improve patient comfort. VISIMAM series of Mammography Systems delivers high quality breast images-consistently, efficiently and easily.</p>
+                <label>X-Ray Tube</label>
+                <p>High quality rotating anode X-ray tube Generator Type –High Frequency 40 KHz:HF HT generator adopts new IGBT tube and programmable logic array technology with 40 KHz working frequency to contribute more stable power out put, less straggling-rays & high picture contrast</p>
+                <label>High Frequency Generator</label>
+                <p>Incorporating the latest innovative technology, including revolutionary exclusive Automatic Self-adjusting Tilt Paddle. This system provides unsurpassed image quality while its automated features simplify operations and ensure consistent system performance and connection with CR.
+The A.S.T. Paddle (optional accessory) assures more uniform compression across the entire breast and improves immobilization of breast tissue, resulting in reduced mobile artifacts and superior image quality</p>
+                <label>The A.S.T. Paddle</label>
+                <p>Paddle prevents over-compression at the chest wall by showing pressure numeral, maximizing patient comfort. The integrity exposure film 4mm deeter breast tissue is visualized. Multi-mammograms in one film is possible.</p>
+            </div>
+    </div>
+    <div id="p_cc_1_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">ICU Ventilators<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>Ventilus Ventilator - Critical Respiratory Support</label>	
+                <p>Our Ventilus ventilators are expertly engineered to deliver critical respiratory support for patients in diverse healthcare settings. Combining advanced technology with intuitive user interfaces, Ventilus ensures precise and effective ventilation, ultimately improving patient outcomes and optimizing clinical workflows.</p>
+            </div>
+    </div>
+    <div id="p_cc_2_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Workstation<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>Anestia Anesthesia Workstation - Advanced Anesthesia Management</label>	
+                <p>Our Anestia Anesthesia Workstation represents a cutting-edge solution meticulously designed to optimize anesthesia management, prioritize patient safety, and enhance overall operational efficiency. This advanced workstation seamlessly integrates state-of-the-art technology with an intuitive design, empowering anesthesiologists to concentrate on their primary focus – delivering exceptional patient care.</p>
+            </div>
+    </div>
+    <div id="p_cc_3_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">ECG Monitor<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>Smart ECG Solutions</label>	
+                <p>We provide a selection of ECG solutions, encompassing multiple-channel devices and diverse models</p>
+            </div>
+    </div>
+    <div id="p_cc_4_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Defibrillator<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>DefibPro AC and Battery Powered Defibrillator</label>	
+                <p>"Revive Lives, Anytime, Anywhere"</p>
+            </div>
+    </div>
+    <div id="p_cc_5_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Modular OT Ductless <button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+                <p>We offer the world's first innovative ductless AHU (Air Handling Unit) for operation theaters, designed to improve healthcare facilities."</p>
+            </div>
+    </div>
+    <div id="p_d1_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">OPG Machine <button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+                <p>Radping Imaging Pvt Ltd handles a wide range of dental products. Our OPG dental X-ray machine is a high-end piece of equipment that delivers exceptional image quality.</p>
+            </div>
+    </div>
+    <div id="p_d2_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">CBCT<button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>3D CBCT Imaging: Advanced Dental Diagnostics</label>
+                <p>We offer high-end 3-in-1 CBCT systems that include 3D CBCT, cephalometry, and 2D imaging capabilities</p>
+            </div>
+    </div>
+    <div id="p_d3_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Intra oral scanner  <button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>Intraoral Sensor: Advanced Dental Imaging</label>
+                <p>Our intraoral sensor provides fast imaging, reducing processing time. It eliminates the need for developing and fixing, making the process quick and easy. This digital imaging solution offers permanent storage, easy comparison, and diagnosis.</p>
+            </div>
+    </div>
+    <div id="p_d4_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Portable dental x ray <button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>Introducing the SiRay Series: Portable Dental X-Ray Units</label>
+                <p>Our range of portable dental X-ray units, including the SiRay Max and SiRay Mia, are designed with a focus on a Humanized Design for ease of use and patient comfort.</p>
+            </div>
+    </div>
+    <div id="p_d5_prod" class="prod_pop_inr">
+    	<div class="prod_poptit">Dental Chairs <button>X</button></div>  
+        	<div class="prod_pop_inrcnt">	
+            	<label>Dental Unit - U100 Standard</label>
+                <p>The Dental Unit U100 Standard delivers a suite of essential features designed for efficient dental practice. Its configuration includes a swing-type/hanging-type dentist element, a dentist control panel, and a built-in intraoral X-ray film viewer. It is equipped with two 2-hole tubings for turbine, one 2-hole tubing for air motor, and a 3-way syringe for the dentist. For the assistant, the unit provides a dedicated control panel, a 3-way syringe, a hydraulic saliva ejector, and a pneumatic suction system. </p>
+            </div>
+    </div>
+</div>
+<!--<footer>
+	<div class="wrapper">All rights reserved. Copyrights @ Vital Bio Systems.
+    	<div class="soc_in">
+        	<a href="https://www.facebook.com/Vital-Bio-Systems-Pvt-Ltd-476855835731872/"><img src="images/fb.png"></a>
+            <a href="https://www.linkedin.com/company/vital-bio-systems-pvt-ltd-?trk=tyah&trkInfo=tarId%3A1395816950742%2Ctas%3Avital+bio+systems%2Cidx%3A1-1-1"><img src="images/in.png"></a>
+            <a href="#"><img src="images/go.png"></a>
+        </div>
+    </div>
+    
+</footer>-->
+</body>
+</html>

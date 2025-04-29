@@ -1,0 +1,93 @@
+.dg-container{
+	width: 100%;
+	height1: 380px;
+	position: relative;
+}
+.dg-wrapper{
+	width: 100%; border:0px solid red;
+	height:auto;
+	max-width:500px; min-width:320px;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+	z-index: 1200;
+}
+.dg-wrapper a{
+	width: 100%; border:0px solid red;
+	height:auto;
+	max-width:500px; min-width:320px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	cursor1:default;
+}
+.dg-wrapper a.dg-transition{
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.dg-wrapper a img{
+	display: block;
+	padding: 0px 0px 0px 1px;
+}
+.dg-wrapper a div{
+ 	font:normal 20px zurich;
+	text-align: center;
+	line-height: 50px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	color: #333;
+	width: 100%;
+	top: -55px;
+	display: none;
+	position: absolute;
+	border:0px solid red;
+}
+.dg-wrapper a button{ position:absolute; top:50%; left:0; width:100%; text-align:center; padding:10px 0; background-color:rgba(250, 187, 141, 0.7); border:none; font:bold 20px source; cursor:pointer; opacity:0; transition: all 0.8s ease-in-out;}
+
+.dg-wrapper a:hover button{ opacity:1; transition: all 0.8s ease-in-out;}
+
+.dg-wrapper a.dg-center div{
+	display: block;
+}
+.dg-container nav{
+	width: 95%;
+	height:50px;
+	position: absolute;
+	z-index: 1000;
+	top: 35%;
+	left: 1%;
+	border:0px solid red;
+}
+.dg-container nav span{
+	/*text-indent: 9000px;*/
+	float: left;
+	cursor:pointer;
+	width: 24px;
+	height: 25px;
+	opacity: 0.6; border:0px solid red;
+	background1: transparent url(../images/arrows.png) no-repeat top left;
+	transition: all 0.5s ease-in-out;
+}
+.dg-container nav span:nth-child(2){ float:right; right:0%;}
+
+.dg-container nav span:hover{
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+.dg-container nav span.dg-next{
+	background-position: top right;
+	margin-left: 10px;
+}

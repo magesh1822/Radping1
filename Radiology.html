@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RADPING</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/type here"/>
+<link rel="stylesheet" href="CSS/Styles.css" media="all" />
+<link rel="stylesheet" href="CSS/app_font.css" media="all" />
+<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+<link rel="stylesheet" href="CSS/main.css">
+
+<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
+<script type="text/javascript" src="script/product.js"></script>
+
+<script type='text/javascript' src='script/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
+
+<!-- Skitter Styles -->
+  <link href="CSS/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+  
+  <!-- Skitter JS -->
+  <script type="text/javascript" language="javascript" src="script/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" language="javascript" src="script/jquery.easing.1.3.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+  <script type="text/javascript" src="script/jquery.cloud9carousel.js"></script> 
+  <script type="text/javascript" src="script/jquery.reflection.js"></script> 
+  <!-- Init Skitter -->
+</head>
+<body>
+<div id="main">    
+    <div id="">
+        <div id="showcase" class="noselect"> 
+        <img class="cloud9-item" src="Images/emp/1.png" alt="Firefox"> 
+        <img class="cloud9-item" src="Images/emp/2.png" alt="Wyzo"> 
+        <img class="cloud9-item" src="Images/emp/3.png" alt="Opera"> 
+        <img class="cloud9-item" src="Images/emp/4.png" alt="Chrome"> 
+        <img class="cloud9-item" src="Images/emp/5.png" alt="Internet Explorer"> 
+        <img class="cloud9-item" src="Images/emp/6.png" alt="Safari"> 
+        <img class="cloud9-item" src="Images/emp/7.png" alt="Firefox"> 
+        <img class="cloud9-item" src="Images/emp/8.png" alt="Wyzo"> 
+        <img class="cloud9-item" src="Images/emp/9.png" alt="Opera"> 
+        <img class="cloud9-item" src="Images/emp/10.png" alt="Chrome"> 
+        <img class="cloud9-item" src="Images/emp/11.png" alt="Internet Explorer"> 
+        <img class="cloud9-item" src="Images/emp/12.png" alt="Safari">
+        <img class="cloud9-item" src="Images/emp/13.png" alt="Firefox"> 
+        <img class="cloud9-item" src="Images/emp/14.png" alt="Wyzo"> 
+        <img class="cloud9-item" src="Images/emp/15.png" alt="Opera"> </div>
+        <p id="item-title">&nbsp;</p>
+        <div class="nav" class="noselect">
+        <button class="left">  ← </button>
+        <button class="right"> → </button>
+        </div>
+</div>
+<script>
+    $(function() {
+      var showcase = $("#showcase")
+
+      showcase.product( {
+        yPos: 42,
+        yRadius: 48,
+        mirrorOptions: {
+          gap: 12,
+          height: 0.2
+        },
+        buttonLeft: $(".nav > .left"),
+        buttonRight: $(".nav > .right"),
+        autoPlay: true,
+        bringToFront: true,
+        onRendered: showcaseUpdated,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function showcaseUpdated( showcase ) {
+        var title = $('#item-title').html(
+          $(showcase.nearestItem()).attr( 'alt' )
+        )
+
+        var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+      // Simulate physical button click effect
+      $('.nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('.nav > .left').click()
+            break
+
+          /* right arrow */
+          case 39:
+            $('.nav > .right').click()
+        }
+      } )
+    })
+  </script> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

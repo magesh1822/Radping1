@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RADPING</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/type here"/>
+<link rel="stylesheet" href="CSS/Styles.css" media="all" />
+<link rel="stylesheet" href="CSS/app_font.css" media="all" />
+<link rel="stylesheet" href="CSS/main.css" media="all" />
+<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
+<script type="text/javascript" src="script/product.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77764505-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+$("document").ready(function(){
+
+	$("#nav_sec1").append("<div id='tab_sel'></div>");
+	
+	var $magicline = $("#tab_sel");
+		
+	
+		$magicline.css("left",$(".sel a").position().left + 75).data("orgLeft",$magicline.position().left);
+		
+		if(window.matchMedia('(max-width: 1280px)').matches)
+			{
+				$magicline.css("left",$(".sel a").position().left + 55).data("orgLeft",$magicline.position().left);
+			} else {
+				$magicline.css("left",$(".sel a").position().left + 75).data("orgLeft",$magicline.position().left);
+			}
+		
+		$(".menu li").find("a").hover(function()
+			{
+				//alert("hi");
+				$this=$(this);
+				leftPos=$this.position().left;
+				newWidth=$this.width();
+				newleft = leftPos + (newWidth/2);
+				$magicline.stop().animate({left:newleft});
+			},function(){
+			$magicline.stop().animate({left:$magicline.data("orgLeft")});
+			});
+		
+
+});
+</script>
+<script type='text/javascript' src='script/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
+
+<!-- Skitter Styles -->
+  <link href="CSS/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+  
+  <!-- Skitter JS -->
+  <script type="text/javascript" language="javascript" src="script/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" language="javascript" src="script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" language="javascript" src="script/jquery.skitter.min.js"></script>
+  
+  <!-- Init Skitter -->
+  <script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+      $('.box_skitter_large').skitter({
+        theme: 'clean',
+        numbers_align: 'center',
+        progressbar: true, 
+        dots: true, 
+        preview: true
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+<div class="top-gr"></div>
+   <div class="wrapper_menu">
+		<div id="brand"><img src="Images/logo.jpg" /></div>
+         <div id="nav_sec1">
+        	<ul class="menu">
+            	<li><a href="index.html">Home</a></li>
+                <li class="sel"><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+   <button id="nav-btn"><img src="Images/menu_icon.png" /></button>            
+        </div>
+   </div> 
+</header>
+<div id="main">
+    <div id="banner_sec">
+    	<div id="content">
+          <div class="border_box">
+            <div class="box_skitter box_skitter_large">
+              <ul>
+                <li><a href="#cube"><img src="Images/Banner.jpg" class="circles" /></a><div class="label_text"><p>Banner 1</p></div></li>
+                <li><a href="#cubeRandom"><img src="Images/Banner.jpg" class="circlesInside" /></a><div class="label_text"><p>Banner 2</p></div></li>
+                <li><a href="#block"><img src="Images/Banner.jpg" class="circlesRotate" /></a><div class="label_text"><p>Banner 3</p></div></li>
+                <!-- <li><a href="#cubeStop"><img src="images/Banner.jpg" class="cubeShow" /></a><div class="label_text"><p>Banner 4</p></div></li> --> 
+              </ul>
+            </div>
+          </div>
+    	</div>
+    </div>
+    <div class="wrapper" id="home_sec">
+    	<div class="main_cnt">
+        <h1>About US</h1>
+        <p>We take pleasure in introducing ourselves “<span class="lg-c1">RAD</span><span class="lg-c2">PING</span>” is a  Bio-Medical Servicing Company .We are specializing in Radiology, Cardiology and Critical care for over 17 years’ experiences each, with an understanding of the precise needs of Imaging and Radiology Specialists. The company is mainly providing products & solutions in the healthcare & industrial imaging domain. Continuous Innovation for launch of new products & solutions based on the market needs is the main focus of the company. Visualization products, Workstations, Devices & customized eco-friendly solutions are some of the keys products and solutions offered.. Established in 2017 our Corporate Head Quarters located in Chennai-India.</p>
+        <p>“<span class="lg-c1">RAD</span><span class="lg-c2">PING</span>” involves the proposed diagram for medical equipments, specification, and procurement of medical equipment, taking into account the client’s required level of technology, program planning objectives, and budgeted monies available.
+Our experience ranges from large-scale replacement hospital projects to assisting individual departments with the planning and procurement of costly medical systems.
+Regardless of the size and scope of our work effort, our services provide sound, objective recommendations on how to most efficiently equip a health care facility. Our process is specifically designed to meet the total medical equipment planning needs of a hospital construction project team.</p>
+        <p>The Company awarded by  <b>ISO 9001:2015, CDSCO, AERB,STARTUP INDIA, MSME</b> certification for maintaining best quality assurance product with safety features & innovative research.</p>
+         </div>
+        <div id="mis_vis">
+        	<h1><span class="lg-c1">RAD </span>PING Vision & Mission</h1>
+        	<div class="m_v_main_lft1">
+            	<img src="Images/abt1.png" class="lft_img" />
+            	<label>Customer Commitment</label>
+                <p>Develop a relationship that makes a positive difference in our customer’s lives.</p>
+            </div>
+            <div class="m_v_main_rht1">
+            	<img src="Images/abt2.png" class="rht_img" />
+            	<label>Quality</label>
+                <p>Provide Outstanding Products and Surpass Service that, together deliver Premium Value to our customer.</p>
+            </div>
+            <div class="m_v_main_lft2">
+            	<img src="Images/abt3.png" class="lft_img" />
+            	<label>Integrity</label>
+                <p>Uphold Highest Standards of Integrity in all out actions.</p>
+            </div>
+            <div class="m_v_main_rht2">
+            	<img src="Images/abt4.png" class="rht_img" />
+            	<label>Team Work</label>
+                <p>Work Together, Cross Boundaries, Meet the Need of the customer in return help the company win.</p>
+            </div>
+            <div class="m_v_main_lft3">
+            	<img src="Images/abt5.png" class="lft_img" />
+            	<label>Respect People</label>
+                <p>Value People, Encourage Development, Reward Performance.</p>
+            </div>
+            <div class="m_v_main_rht3">
+            	<img src="Images/abt6.png" class="rht_img" />
+            	<label>Good Citizenship</label>
+                <p>Good Citizenship, Enhance Life Values and Work.</p>
+            </div>
+            <div class="m_v_main_lft4">
+            	<img src="Images/abt7.png" class="lft_img" />
+            	<label>A Win to Win</label>
+                <p>Exhibit a strong Will to Win in market place and in every aspect of life and work.</p>
+            </div>
+            <div class="m_v_main_rht4">
+            	<img src="Images/abt8.png" class="rht_img" />
+            	<label>Personal Accountability</label>
+                <p>Develop Personal Accountability for delivering on our Commitment.</p>
+            </div>
+        </div>
+        <div id="mdul">
+                <div id="tit"><h1>Our<br> Business<br> Module</h1></div>
+                <div><label>Content drives commerce, and people<br> love a one-stop shop.</label></div>
+                <div><label>Orchestrate Demand<br> Aggression</label></div>
+                <div><label>Envision a Clinical Business Plan.</label></div>
+                <div><label>Setup a Modern Franchise Module & Determine<br> Key Business Partners.</label></div>
+            </div>
+        <div id="emp_list">
+        	<h2>Our <span class="lg-c1">RAD</span><span class="lg-c2">PING</span> IMAGING FAMILY</h2>
+        	<iframe id="emp_list_inr" src="employee.html" />
+        </div>
+        
+</div>
+<!--<footer>
+	<div class="wrapper">All rights reserved. Copyrights @ Vital Bio Systems.
+    	<div class="soc_in">
+        	<a href="https://www.facebook.com/Vital-Bio-Systems-Pvt-Ltd-476855835731872/"><img src="images/fb.png"></a>
+            <a href="https://www.linkedin.com/company/vital-bio-systems-pvt-ltd-?trk=tyah&trkInfo=tarId%3A1395816950742%2Ctas%3Avital+bio+systems%2Cidx%3A1-1-1"><img src="images/in.png"></a>
+            <a href="#"><img src="images/go.png"></a>
+        </div>
+    </div>
+    
+</footer>-->
+</body>
+</html>
+<script>
+    $(function() {
+      var showcase = $("#showcase")
+
+      showcase.product( {
+        yPos: 42,
+        yRadius: 48,
+        mirrorOptions: {
+          gap: 12,
+          height: 0.2
+        },
+        buttonLeft: $(".nav > .left"),
+        buttonRight: $(".nav > .right"),
+        autoPlay: true,
+        bringToFront: true,
+        onRendered: showcaseUpdated,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function showcaseUpdated( showcase ) {
+        var title = $('#item-title').html(
+          $(showcase.nearestItem()).attr( 'alt' )
+        )
+
+        var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+      // Simulate physical button click effect
+      $('.nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('.nav > .left').click()
+            break
+
+          /* right arrow */
+          case 39:
+            $('.nav > .right').click()
+        }
+      } )
+    })
+  </script> 

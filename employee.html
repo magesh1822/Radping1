@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>:: </title>
+
+
+<link rel="stylesheet" href="CSS/main.css" media="all">
+
+
+<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="script/product.js"></script>
+
+
+
+
+</head>
+<body>
+ 	
+
+                <div id="showcase" class="noselect"> 
+                <img class="cloud9-item" src="images/emp/1.png" alt="Founder & CEO"> 
+                <img class="cloud9-item" src="images/emp/2.png" alt="Head of Admin"> 
+                <img class="cloud9-item" src="images/emp/3.png" alt="Director of Critical Care Division <br/> 30+ Years Exp">
+                <img class="cloud9-item" src="images/emp/4.png" alt="Director-Dental Division <br/> 20+ Years Exp"> 
+                <img class="cloud9-item" src="images/emp/5.png" alt="Director-Govt Projects <br/> 20+ Years Exp "> 
+                <img class="cloud9-item" src="images/emp/6.png" alt="Sales Manager <br/> 30+ Years Exp">
+                <img class="cloud9-item" src="images/emp/7.png" alt="Marketing Manager <br/> 30+ Years Exp"> 
+                <img class="cloud9-item" src="images/emp/8.png" alt="General Manager <br/> 25+ Years Exp"> 
+                <img class="cloud9-item" src="images/emp/9.png" alt="Technical Support <br/> 15+ Years Exp">                  
+                <img class="cloud9-item" src="images/emp/10.png" alt="Director of Finance <br/> 10+ Years Exp">                   
+                <img class="cloud9-item" src="images/emp/11.png" alt="Techno Commercial-Manager <br/> 12+ Years Experience">                   
+                <img class="cloud9-item" src="images/emp/12.png" alt="Techno Commercial <br/> 3+ Years Experience">                   
+                <img class="cloud9-item" src="images/emp/13.png" alt="Accountant <br/> 3+ YearsExperience">                    
+                <img class="cloud9-item" src="images/emp/14.png" alt=" Finance Advisor <br/> 30+ Years Experience">                   
+                <img class="cloud9-item" src="images/emp/15.png" alt="Mentor with Finace Advisor <br/> 25+ Years Experience"> 
+                 </div>
+                <p id="item-title">&nbsp;</p>
+                <!--<div class="nav" class="noselect">
+                <button class="left">  ← </button>
+                <button class="right"> → </button>
+                </div>-->
+
+</body>
+</html>
+<script>
+    $(function() {
+      var showcase = $("#showcase")
+
+      showcase.product( {
+        yPos: 42,
+        yRadius: 48,
+        mirrorOptions: {
+          gap: 12,
+          height: 0.2
+        },
+        buttonLeft: $(".nav > .left"),
+        buttonRight: $(".nav > .right"),
+        autoPlay: true,
+        bringToFront: true,
+        onRendered: showcaseUpdated,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+		  showcase.css( 'opacity1', '0.2' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function showcaseUpdated( showcase ) {
+        var title = $('#item-title').html(
+          $(showcase.nearestItem()).attr( 'alt' )
+        )
+
+        var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+      // Simulate physical button click effect
+      $('.nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('.nav > .left').click()
+            break
+
+          /* right arrow */
+          case 39:
+            $('.nav > .right').click()
+        }
+      } )
+    })
+  </script> 
